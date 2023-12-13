@@ -47,7 +47,8 @@
 
   ![](./figure/face.png)
 
-​	Beamer模板：![](./figure/face2.png)
+​		Beamer模板：
+​		![](figure/face2.png)
 
 - **作者**
 
