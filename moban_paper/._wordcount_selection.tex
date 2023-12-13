@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+  \centering
+  \caption{不同决策树算法的特征选择标准}
+  \begin{tabular}{llll}
+    \toprule
+    \toprule
+    算法    & 特征选择标准  & 是否多叉树 & 适用范围\\
+    \midrule
+    ID3  & 信息增益   & 多叉树 & 仅分类问题\\
+    C4.5  & 信息增益熵 & 多叉树 & 仅分类问题\\
+    CART  & 基尼系数/平方误差 & 二叉树 & 分类和回归问题\\
+    \bottomrule
+    \bottomrule
+  \end{tabular}%
+  \label{tab:2}%
+\end{table}%

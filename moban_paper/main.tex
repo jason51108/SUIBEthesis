@@ -1,0 +1,214 @@
+% -------------------------
+% Author: 杨睿
+% Github: https://github.com/Yangruipis
+% E-mail: yangruipis@163.com
+% -------------------------
+% !TeX root = main.tex
+\documentclass{SUIBEthesis}
+\usepackage{booktabs, lmodern}
+\usepackage[comma, sort&compress,numbers, square,super]{natbib}
+\usepackage[nottoc]{tocbibind}      % 将参考文献加入目录
+\usepackage{amsmath}
+\usepackage{tocloft}
+\usepackage{amssymb}
+\usepackage{diagbox} % 表格中的斜线
+\usepackage{multirow} % 多行表格
+\usepackage{gbt7714} % 国标参考文献
+\usepackage{threeparttable} % 表格附注
+\numberwithin{figure}{section}
+\numberwithin{table}{section}   
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+
+\begin{document}
+ 
+\title{标题}
+\author{姓名}
+\studentnum{学号}
+\advisor{导师}
+\degree{专业}
+\school{上海对外经贸大学}
+\major{专业}
+\finishdate{2023年11月}
+
+\maketitle
+
+\baselineskip=20pt % 全文20pt行距
+\newpage
+\begin{sloppypar}
+\begin{abstract}
+
+这里是中文摘要
+
+\end{abstract}
+
+\keywords{关键字}
+
+\newpage
+\begin{enabstract}
+
+这里是英文摘要
+\end{enabstract}
+
+\enkeywords{英文关键字}
+
+
+% ------------------- 目录页 -----------------------
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+% --------------------------------------------------
+
+% --------------------------------------------------正文部分
+\newpage
+\setcounter{page}{1} 
+\pagestyle{mainpage}
+\section{绪论}
+正文1
+
+\subsection{国内外研究现状}
+正文1.1
+\subsubsection{时间序列模型的分解与重构}
+正文1.1.1
+
+\section{测试公式}
+\begin{equation}
+  \left[
+  \begin{array}{c}
+     y_1^{(i)}(t) \\
+     y_2^{(i)}(t) 
+  \end{array}
+  \right]
+  =
+  \left[
+  \begin{array}{cc}
+      1 & 1 \\
+      1 & -1
+  \end{array}
+  \right]
+  \left[
+  \begin{array}{c}
+      x \\ 
+      w^(i)
+  \end{array}
+  \right]
+  \nonumber
+  \end{equation}
+
+\subsection{测试多行公式}
+\begin{align}
+  &y_t = (f^{(l)}(x)_{t-1})\theta_t^{(l)}+\epsilon_t^{(l)} \label{eq:ml-dma}\\
+  &\theta_t^{(l)} = \theta_{t-1}^{(l)}+\eta_t^{(l)}
+\end{align}
+
+\subsection{测试表格}
+\begin{table}[htbp]
+  \centering
+  \caption{不同决策树算法的特征选择标准}
+  \begin{tabular}{llll}
+    \toprule
+    \toprule
+    算法    & 特征选择标准  & 是否多叉树 & 适用范围\\
+    \midrule
+    ID3  & 信息增益   & 多叉树 & 仅分类问题\\
+    C4.5  & 信息增益熵 & 多叉树 & 仅分类问题\\
+    CART  & 基尼系数/平方误差 & 二叉树 & 分类和回归问题\\
+    \bottomrule
+    \bottomrule
+  \end{tabular}%
+  \label{tab:2}%
+\end{table}%
+
+
+\subsection{测试带附注的表格}
+\begin{table}[htbp]
+  \centering
+  \caption{测试带附注的表格}
+  \begin{threeparttable} 
+  \begin{tabular}{cccc}
+    \toprule
+    \toprule
+    1 & 2 & 3 & 4\\
+    \midrule
+    1& & & \\
+    2& & & \\
+    3& & & \\
+    4& & & \\
+    \bottomrule
+    \bottomrule
+  \end{tabular}
+  \begin{tablenotes}
+    \footnotesize
+    \item[1] 这里是表格附注
+  \end{tablenotes}
+\end{threeparttable} 
+
+\end{table}%
+
+
+\subsection{测试表格中带斜线}
+
+\begin{table}[htbp]
+  \centering
+  \caption{测试表格中带斜线}
+  \begin{tabular}{cccccccc}
+    \toprule
+    \toprule
+    \diagbox{$\lambda$}{$\alpha$}& 1& 2 \\
+    \midrule
+    1 & & \\
+    2 & & \\
+    \bottomrule
+    \bottomrule
+  \end{tabular}%
+  \label{tab:md1}%
+\end{table}%
+
+
+
+% 测试参考文献引用：
+
+
+% 本文采用顺序编码制，使用国标7714格式，具体细节参见gbt7714 github地址
+% 采用作者+年份，参考文献处则没有顺序
+% 采用顺序编码，参考文献处则有标号
+\bibliographystyle{gbt7714-numerical}
+
+测试引用\cite{Machines2002}
+
+测试引用\citet{Machines2002}
+
+测试引用\citep{Machines2002}
+
+多重引用\citet{Machines2002,RandomForests2001}
+
+
+\xiaosi
+\bibliography{reference}
+
+
+
+\begin{myappendix}
+\begin{python}[moreemph={[4]42},caption={RV分解}]
+import numpy as np
+import pandas as pd
+import scipy.stats as st
+\end{python}
+\end{myappendix}
+
+
+
+
+
+
+\begin{mythanks}
+
+\thispagestyle{empty}
+感谢我的老师和小伙伴！
+\end{mythanks}
+
+\end{sloppypar}
+\end{document}
+
+

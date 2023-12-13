@@ -1,0 +1,144 @@
+\documentclass{ldr-simple-gray}
+\usepackage{graphicx}
+\usepackage{diagbox}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\setlength{\parindent}{2em} %设置首行缩进
+
+
+%------------------------------------------------------------
+%首页start
+\title{假如你的题目很长的话。。。。。。}
+
+%\subtitle{开题答辩}
+
+\author{作者}
+
+\institute[]
+{
+%导师：李文副教授\\
+% 记得改啊，老是有人不改学院……
+%上海对外经贸大学\quad 统计与信息学院
+}
+
+\date{\today}
+
+% \logo{\includegraphics[height=1cm]{lzu_logo.png}}
+\titlegraphic{\includegraphics[height=2cm]{lzu_logo.png}}
+
+%首页end
+%------------------------------------------------------------
+
+\begin{document}
+
+%封面
+\frame{\titlepage}
+
+
+% \begin{frame}{个人信息}
+%     \begin{itemize}
+%         % 记得改啊
+%         \item 姓名：陈颖航
+%         \item 学院：统计与信息学院
+%         \item 专业：应用统计
+%         \item 方向：商务数据挖掘和人工智能
+%     \end{itemize}
+%     %生成分割实线 \qquad \noindent\rule[0.25\baselineskip]{0.9\textwidth}{1pt}
+% \end{frame}
+
+
+\section{测试图片}
+
+\begin{frame}{普通图片}
+
+\begin{figure}
+    \includegraphics[width=0.5\textwidth]{lzu_logo.png}
+\end{figure}
+\end{frame}
+\begin{frame}{图片并排}
+  \begin{figure}[htbp]
+  \begin{minipage}[t]{0.45\linewidth}
+      \includegraphics[width=1\linewidth]{lzu_logo.png}
+      \caption{图片1}  
+  \end{minipage}
+  \begin{minipage}[t]{0.45\linewidth}
+      \includegraphics[width=1\linewidth]{lzu_logo.png}
+      \caption{图片2}   
+  \end{minipage}
+  \end{figure}
+  \end{frame}
+
+\section{测试表格}
+
+\begin{frame}{普通表格}
+  \begin{table}[htbp]
+    \centering
+    \caption{不同决策树算法的特征选择标准}
+    \begin{tabular}{llll}
+      \toprule
+      \toprule
+      算法    & 特征选择标准  & 是否多叉树 & 适用范围\\
+      \midrule
+      ID3  & 信息增益   & 多叉树 & 仅分类问题\\
+      C4.5  & 信息增益熵 & 多叉树 & 仅分类问题\\
+      CART  & 基尼系数/平方误差 & 二叉树 & 分类和回归问题\\
+      \bottomrule
+      \bottomrule
+    \end{tabular}%
+
+  \end{table}%
+\end{frame}
+
+
+\begin{frame}{表格缩放}
+  \begin{table}[htbp]
+    \centering
+    \caption{不同决策树算法的特征选择标准}
+    \scalebox{0.5}{
+    \begin{tabular}{llll}
+      \toprule
+      \toprule
+      算法    & 特征选择标准  & 是否多叉树 & 适用范围\\
+      \midrule
+      ID3  & 信息增益   & 多叉树 & 仅分类问题\\
+      C4.5  & 信息增益熵 & 多叉树 & 仅分类问题\\
+      CART  & 基尼系数/平方误差 & 二叉树 & 分类和回归问题\\
+      \bottomrule
+      \bottomrule
+    \end{tabular}}
+  \end{table}%
+\end{frame}
+
+\section{测试分栏}
+
+\begin{frame}
+  \begin{columns}
+      \begin{column}{0.4\textwidth}
+        这里是左边，你可以写一些文字内容
+        \begin{itemize}
+          \item 第一个文字
+          \item 第二个文字\footfullcite{还可以加一些脚注}
+        \end{itemize}
+        
+  \end{column}
+  \begin{column}{0.6\textwidth}
+      \begin{figure}[htbp!]
+          \centering
+          \includegraphics[width=0.95\linewidth]{lzu_logo.png}
+          \caption{这里是右栏，你可以放一些
+          图片}
+        \end{figure}
+      \end{column}      
+  \end{columns}
+\end{frame}
+
+\begin{frame}{\quad}
+    \begin{center}
+            \zihao{2} 请老师批评指正！
+    \end{center}
+\end{frame}
+
+    
+
+
+\end{document}
