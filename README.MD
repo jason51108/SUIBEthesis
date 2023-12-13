@@ -45,9 +45,9 @@
 
   论文模板：
 
-  ![](../上海对外经贸大学毕业论文模板/figure/face.png)
+  ![](./figure/face.png)
 
-​	Beamer模板：![](../上海对外经贸大学毕业论文模板/figure/face2.png)
+​	Beamer模板：![](./figure/face2.png)
 
 - **作者**
 
